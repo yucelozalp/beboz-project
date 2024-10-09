@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beboz Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-notify@1.0.4/dist/simple-notify.css" />
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="b-header b-container">
+        <div class="left">
+            <div class="logo">
+                <a href="/"><img src="/img/beboz.png" alt=""></a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="/">Anasayfa</a></li>
+                    <li>Menü</li>
+                    <li>Servis</li>
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+            <div class="actions">
+                <a onclick="openModalEditBooking()" class="b-action b-second-color">Rezervasyon Sorgula</a>
+                <a href="rezerve.html" class="b-action b-primary-color">Rezervasyon Yap</a>
+            </div>
+        </div>
+
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="menu mobile">
+            <ul>
+                <li>Anasayfa</li>
+                <li>Menü</li>
+                <li>Servis</li>
+                <li><a onclick="openModalEditBooking()" class="b-action b-second-color">Rezervasyon Sorgula</a></li>
+                <li><a href="rezerve.html" class="b-action b-primary-color">Rezervasyon Yap</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="b-booking b-container">
+        <div class="left">
+            <div class="pre-inform">
+                <img src="/img/booking-bg-min.jpeg" alt="">
+            </div>
+
+            <div class="booking-cap">
+                <div class="tab-container">
+                    <h1 class="tab-title">Rezervasyon Yap</h1>
+                    <div class="tab active" id="tab1">
+                        <div class="tab-header">
+                            <div class="x-left">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                        fill="none">
+                                        <path
+                                            d="M14.9999 5.96663C14.9499 5.9583 14.8916 5.9583 14.8416 5.96663C13.6916 5.92496 12.7749 4.98329 12.7749 3.81663C12.7749 2.62496 13.7332 1.66663 14.9249 1.66663C16.1166 1.66663 17.0749 2.63329 17.0749 3.81663C17.0666 4.98329 16.1499 5.92496 14.9999 5.96663Z"
+                                            stroke="#004225" stroke-width="1.25" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M14.1415 12.0333C15.2831 12.225 16.5415 12.025 17.4248 11.4333C18.5998 10.65 18.5998 9.36664 17.4248 8.58331C16.5331 7.99164 15.2581 7.79163 14.1165 7.99163"
+                                            stroke="#004225" stroke-width="1.25" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M4.9749 5.96663C5.0249 5.9583 5.08324 5.9583 5.13324 5.96663C6.28324 5.92496 7.1999 4.98329 7.1999 3.81663C7.1999 2.62496 6.24157 1.66663 5.0499 1.66663C3.85824 1.66663 2.8999 2.63329 2.8999 3.81663C2.90824 4.98329 3.8249 5.92496 4.9749 5.96663Z"
+                                            stroke="#004225" stroke-width="1.25" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M5.83328 12.0333C4.69162 12.225 3.43328 12.025 2.54995 11.4333C1.37495 10.65 1.37495 9.36664 2.54995 8.58331C3.44162 7.99164 4.71662 7.79163 5.85828 7.99163"
+                                            stroke="#004225" stroke-width="1.25" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M10.0001 12.1917C9.95014 12.1834 9.89181 12.1834 9.84181 12.1917C8.69181 12.1501 7.77515 11.2084 7.77515 10.0417C7.77515 8.85006 8.73348 7.89172 9.92514 7.89172C11.1168 7.89172 12.0751 8.85839 12.0751 10.0417C12.0668 11.2084 11.1501 12.1584 10.0001 12.1917Z"
+                                            stroke="#004225" stroke-width="1.25" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M7.5751 14.8167C6.4001 15.6 6.4001 16.8833 7.5751 17.6667C8.90843 18.5583 11.0918 18.5583 12.4251 17.6667C13.6001 16.8833 13.6001 15.6 12.4251 14.8167C11.1001 13.9333 8.90843 13.9333 7.5751 14.8167Z"
+                                            stroke="#004225" stroke-width="1.25" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <span class="title">Kişi Sayısı</span>
+                            </div>
+
+                            <div class="x-right">
+                                <span class="not-selected">Kişi Sayısı</span>
+                                <div class="selected" style="display: none;">
+                                    <div class="icon edit-btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none">
+                                            <path
+                                                d="M11.05 3.00002L4.20829 10.2417C3.94996 10.5167 3.69996 11.0584 3.64996 11.4334L3.34162 14.1333C3.23329 15.1083 3.93329 15.775 4.89996 15.6084L7.58329 15.15C7.95829 15.0834 8.48329 14.8084 8.74162 14.525L15.5833 7.28335C16.7666 6.03335 17.3 4.60835 15.4583 2.86668C13.625 1.14168 12.2333 1.75002 11.05 3.00002Z"
+                                                stroke="#004225" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M9.9082 4.20837C10.2665 6.50837 12.1332 8.26671 14.4499 8.50004"
+                                                stroke="#004225" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M2.5 18.3334H17.5" stroke="#004225" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <span class="text">6</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <div class="number-of-people">
+                                <div class="numbers">
+                                    <div onclick="selectPerson(1)" class="number-item">
+                                        <span>1</span>
+                                    </div>
+                                    <div onclick="selectPerson(2)" class="number-item">
+                                        <span>2</span>
+                                    </div>
+                                    <div onclick="selectPerson(3)" class="number-item">
+                                        <span>3</span>
+                                    </div>
+                                    <div onclick="selectPerson(4)" class="number-item">
+                                        <span>4</span>
+                                    </div>
+                                    <div onclick="selectPerson(5)" class="number-item">
+                                        <span>5</span>
+                                    </div>
+                                    <div onclick="selectPerson(6)" class="number-item">
+                                        <span>6</span>
+                                    </div>
+                                </div>
+                                <div class="inform-for-multiple">
+                                    <div class="icon-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                                stroke="#004225" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <rect x="13.5" y="18" width="3" height="7.5" rx="1"
+                                                transform="rotate(-180 13.5 18)" fill="#004225" />
+                                            <rect x="13.5" y="9" width="3" height="3" rx="1"
+                                                transform="rotate(-180 13.5 9)" fill="#004225" />
+                                        </svg>
+                                    </div>
+                                    <div class="inform-text">
+                                        <p>6 kişi üzeri için <b>+90 (531) 111 22 33</b> numarasından veya
+                                            <b>beboz@gmail.com</b> dan bizimle iletişime geçebilirsiniz.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab disabled" id="tab2">
+                        <div class="tab-header">
+                            <div class="x-left">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                        fill="none">
+                                        <path d="M6.6665 1.66663V4.16663" stroke="#272727" stroke-width="1.25"
+                                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M13.3335 1.66663V4.16663" stroke="#272727" stroke-width="1.25"
+                                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M15.1667 17.8333C16.6394 17.8333 17.8333 16.6394 17.8333 15.1667C17.8333 13.6939 16.6394 12.5 15.1667 12.5C13.6939 12.5 12.5 13.6939 12.5 15.1667C12.5 16.6394 13.6939 17.8333 15.1667 17.8333Z"
+                                            stroke="#272727" stroke-width="1.25" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M18.3333 18.3333L17.5 17.5" stroke="#272727" stroke-width="1.25"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M2.9165 7.57495H17.0832" stroke="#272727" stroke-width="1.25"
+                                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M11.1417 18.3333H6.66667C3.75 18.3333 2.5 16.6666 2.5 14.1666V7.08329C2.5 4.58329 3.75 2.91663 6.66667 2.91663H13.3333C16.25 2.91663 17.5 4.58329 17.5 7.08329V10.8333"
+                                            stroke="#272727" stroke-width="1.25" stroke-miterlimit="10"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M9.99609 11.4166H10.0036" stroke="#272727" stroke-width="1.66667"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M6.91209 11.4167H6.91957" stroke="#272727" stroke-width="1.66667"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M6.91209 13.9167H6.91957" stroke="#272727" stroke-width="1.66667"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <span class="title">Rezervasyon Tarihi</span>
+                            </div>
+
+                            <div class="x-right">
+                                <span id="not-selected" class="not-selected" style="display: nones;">Tarih</span>
+                                <div id="selected" class="selected" style="display: none;">
+                                    <div class="icon edit-btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none">
+                                            <path
+                                                d="M11.05 3.00002L4.20829 10.2417C3.94996 10.5167 3.69996 11.0584 3.64996 11.4334L3.34162 14.1333C3.23329 15.1083 3.93329 15.775 4.89996 15.6084L7.58329 15.15C7.95829 15.0834 8.48329 14.8084 8.74162 14.525L15.5833 7.28335C16.7666 6.03335 17.3 4.60835 15.4583 2.86668C13.625 1.14168 12.2333 1.75002 11.05 3.00002Z"
+                                                stroke="#004225" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M9.9082 4.20837C10.2665 6.50837 12.1332 8.26671 14.4499 8.50004"
+                                                stroke="#004225" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M2.5 18.3334H17.5" stroke="#004225" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <span class="text">6</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <div class="beboz-calendar">
+                                <div class="calendar-body">
+                                    <div class="x-left">
+                                        <span id="month-name">EKİM 2024</span>
+                                    </div>
+                                    <div class="x-right">
+                                        <div class="arrows">
+                                            <div id="prev-month" class="x-left">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17"
+                                                    viewBox="0 0 16 17" fill="none">
+                                                    <path
+                                                        d="M10.1831 4.675L6.35811 8.5L10.1831 12.325L8.99977 13.5L3.99977 8.5L8.99977 3.5L10.1831 4.675Z"
+                                                        fill="#5F5F5F" />
+                                                </svg>
+                                            </div>
+                                            <div id="next-month" class="x-right">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17"
+                                                    viewBox="0 0 16 17" fill="none">
+                                                    <path
+                                                        d="M5.81689 12.325L9.6419 8.5L5.8169 4.675L7.00023 3.5L12.0002 8.5L7.00023 13.5L5.81689 12.325Z"
+                                                        fill="#5F5F5F" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="calendar-content">
+                                    <div class="week">
+                                        <span>PZT</span>
+                                        <span>SA</span>
+                                        <span>ÇRŞ</span>
+                                        <span>PER</span>
+                                        <span>CU</span>
+                                        <span>CMT</span>
+                                        <span>PZ</span>
+                                    </div>
+                                    <div class="days" id="days">
+                                        <div class="day-item">
+                                            <span>1</span>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>2</span>
+                                        </div>
+                                        <div class="day-item selected">
+                                            <span>3</span>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>4</span>
+                                        </div>
+                                        <div class="day-item booked">
+                                            <span>5</span>
+                                            <i class="booked-s">Dolu</i>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>6</span>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>7</span>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>8</span>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>9</span>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>10</span>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>11</span>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>12</span>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>13</span>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>14</span>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>15</span>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>16</span>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>17</span>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>18</span>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>19</span>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>20</span>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>21</span>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>22</span>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>23</span>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>24</span>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>25</span>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>26</span>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>27</span>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>28</span>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>29</span>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>30</span>
+                                        </div>
+                                        <div class="day-item">
+                                            <span>31</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab disabled" id="tab3">
+                        <div class="tab-header">
+                            <div class="x-left">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                        fill="none">
+                                        <path
+                                            d="M18.3332 9.99996C18.3332 14.6 14.5998 18.3333 9.99984 18.3333C5.39984 18.3333 1.6665 14.6 1.6665 9.99996C1.6665 5.39996 5.39984 1.66663 9.99984 1.66663C14.5998 1.66663 18.3332 5.39996 18.3332 9.99996Z"
+                                            stroke="#272727" stroke-width="1.25" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M13.0919 12.65L10.5086 11.1083C10.0586 10.8416 9.69189 10.2 9.69189 9.67497V6.2583"
+                                            stroke="#272727" stroke-width="1.25" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <span class="title">Rezervasyon Saati</span>
+                            </div>
+
+                            <div class="x-right">
+                                <span class="not-selected" style="display: nones;">Saat</span>
+                                <div class="selected" style="display: none;">
+                                    <div class="icon edit-btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none">
+                                            <path
+                                                d="M11.05 3.00002L4.20829 10.2417C3.94996 10.5167 3.69996 11.0584 3.64996 11.4334L3.34162 14.1333C3.23329 15.1083 3.93329 15.775 4.89996 15.6084L7.58329 15.15C7.95829 15.0834 8.48329 14.8084 8.74162 14.525L15.5833 7.28335C16.7666 6.03335 17.3 4.60835 15.4583 2.86668C13.625 1.14168 12.2333 1.75002 11.05 3.00002Z"
+                                                stroke="#004225" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M9.9082 4.20837C10.2665 6.50837 12.1332 8.26671 14.4499 8.50004"
+                                                stroke="#004225" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M2.5 18.3334H17.5" stroke="#004225" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <span class="text">6</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <div class="hour-select">
+                                <div class="hour-type">
+                                    <span class="type-title">GÜNDÜZ</span>
+                                    <div class="hours">
+                                        <div onclick="selectTime('12:00')" class="hour-item">
+                                            <span>12:00</span>
+                                        </div>
+                                        <div onclick="selectTime('13:00')" class="hour-item">
+                                            <span>13:00</span>
+                                        </div>
+                                        <div onclick="selectTime('14:00')" class="hour-item">
+                                            <span>14:00</span>
+                                        </div>
+                                        <div onclick="selectTime('15:00')" class="hour-item">
+                                            <span>15:00</span>
+                                        </div>
+                                        <div onclick="selectTime('16:00')" class="hour-item">
+                                            <span>16:00</span>
+                                        </div>
+                                        <div onclick="selectTime('17:00')" class="hour-item">
+                                            <span>17:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hour-type">
+                                    <span class="type-title">AKŞAM</span>
+                                    <div class="hours">
+                                        <div onclick="selectTime('18:00')" class="hour-item">
+                                            <span>18:00</span>
+                                        </div>
+                                        <div onclick="selectTime('19:00')" class="hour-item">
+                                            <span>19:00</span>
+                                        </div>
+                                        <div onclick="selectTime('20:00')" class="hour-item">
+                                            <span>20:00</span>
+                                        </div>
+                                        <div onclick="selectTime('21:00')" class="hour-item">
+                                            <span>21:00</span>
+                                        </div>
+                                        <div onclick="selectTime('22:00')" class="hour-item">
+                                            <span>22:00</span>
+                                        </div>
+                                        <div onclick="selectTime('23:00')" class="hour-item">
+                                            <span>23:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab disabled" id="tab4">
+                        <div class="tab-header">
+                            <div class="x-left">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                        fill="none">
+                                        <path
+                                            d="M7.50033 18.3333H12.5003C16.667 18.3333 18.3337 16.6666 18.3337 12.5V7.49996C18.3337 3.33329 16.667 1.66663 12.5003 1.66663H7.50033C3.33366 1.66663 1.66699 3.33329 1.66699 7.49996V12.5C1.66699 16.6666 3.33366 18.3333 7.50033 18.3333Z"
+                                            stroke="#272727" stroke-width="1.25" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M12.917 8.125C13.6073 8.125 14.167 7.56536 14.167 6.875C14.167 6.18464 13.6073 5.625 12.917 5.625C12.2266 5.625 11.667 6.18464 11.667 6.875C11.667 7.56536 12.2266 8.125 12.917 8.125Z"
+                                            stroke="#272727" stroke-width="1.25" stroke-miterlimit="10"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M7.08301 8.125C7.77336 8.125 8.33301 7.56536 8.33301 6.875C8.33301 6.18464 7.77336 5.625 7.08301 5.625C6.39265 5.625 5.83301 6.18464 5.83301 6.875C5.83301 7.56536 6.39265 8.125 7.08301 8.125Z"
+                                            stroke="#272727" stroke-width="1.25" stroke-miterlimit="10"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M7 11.0834H13C13.4167 11.0834 13.75 11.4167 13.75 11.8334C13.75 13.9084 12.075 15.5834 10 15.5834C7.925 15.5834 6.25 13.9084 6.25 11.8334C6.25 11.4167 6.58333 11.0834 7 11.0834Z"
+                                            stroke="#272727" stroke-width="1.25" stroke-miterlimit="10"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <span class="title">Rezervasyonunuzu Özelleştirin</span>
+                            </div>
+
+                            <div class="x-right">
+                                <span class="not-selected" style="display: nones;">Özellleştir</span>
+                                <div class="selected" style="display: none;">
+                                    <div class="icon edit-btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none">
+                                            <path
+                                                d="M11.05 3.00002L4.20829 10.2417C3.94996 10.5167 3.69996 11.0584 3.64996 11.4334L3.34162 14.1333C3.23329 15.1083 3.93329 15.775 4.89996 15.6084L7.58329 15.15C7.95829 15.0834 8.48329 14.8084 8.74162 14.525L15.5833 7.28335C16.7666 6.03335 17.3 4.60835 15.4583 2.86668C13.625 1.14168 12.2333 1.75002 11.05 3.00002Z"
+                                                stroke="#004225" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M9.9082 4.20837C10.2665 6.50837 12.1332 8.26671 14.4499 8.50004"
+                                                stroke="#004225" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M2.5 18.3334H17.5" stroke="#004225" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <span class="text">6</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <div class="customisation">
+                                <div class="customisation-inform">
+                                    <span class="customisation-title">Etkinliğiniz mi var </span>
+                                    <p>En fazla 3 etkinlik seçebilir ve notunuz varsa rezervasyonu
+                                        özelleştirebilirsiniz.</p>
+                                </div>
+                                <div class="customisations">
+                                    <div class="customisation-item" data-id="1">
+                                        <div class="item-img">
+
+                                        </div>
+                                        <div class="item-detail">
+                                            <span>Doğum Günü</span>
+                                        </div>
+                                    </div>
+                                    <div class="customisation-item" data-id="2">
+                                        <div class="item-img">
+
+                                        </div>
+                                        <div class="item-detail">
+                                            <span>Yıl Dönümü</span>
+                                        </div>
+                                    </div>
+                                    <div class="customisation-item" data-id="3">
+                                        <div class="item-img">
+
+                                        </div>
+                                        <div class="item-detail">
+                                            <span>Özel Etkinlik</span>
+                                        </div>
+                                    </div>
+                                    <div class="customisation-item" data-id="4">
+                                        <div class="item-img">
+
+                                        </div>
+                                        <div class="item-detail">
+                                            <span>Toplantı</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="additional-inform">
+                                    <div class="inform-cap">
+                                        <textarea id="additional-inform-inp" maxlength="120"
+                                            placeholder="Varsa rezervasyon ile ilgili yazınız"></textarea>
+                                        <span id="remaining">120</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab disabled" id="tab5">
+                        <div class="tab-header">
+                            <div class="x-left">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                        fill="none">
+                                        <path
+                                            d="M10.0999 10.65C10.0416 10.6417 9.9666 10.6417 9.89993 10.65C8.43327 10.6 7.2666 9.39998 7.2666 7.92498C7.2666 6.41665 8.48327 5.19165 9.99993 5.19165C11.5083 5.19165 12.7333 6.41665 12.7333 7.92498C12.7249 9.39998 11.5666 10.6 10.0999 10.65Z"
+                                            stroke="#272727" stroke-width="1.25" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M15.6171 16.15C14.1338 17.5084 12.1671 18.3334 10.0005 18.3334C7.83379 18.3334 5.86712 17.5084 4.38379 16.15C4.46712 15.3667 4.96712 14.6 5.85879 14C8.14212 12.4834 11.8755 12.4834 14.1421 14C15.0338 14.6 15.5338 15.3667 15.6171 16.15Z"
+                                            stroke="#272727" stroke-width="1.25" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M10.0003 18.3333C14.6027 18.3333 18.3337 14.6023 18.3337 9.99996C18.3337 5.39759 14.6027 1.66663 10.0003 1.66663C5.39795 1.66663 1.66699 5.39759 1.66699 9.99996C1.66699 14.6023 5.39795 18.3333 10.0003 18.3333Z"
+                                            stroke="#272727" stroke-width="1.25" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <span class="title">Rezervasyonunuzu onaylayın</span>
+                            </div>
+
+                            <div class="x-right">
+                                <span class="not-selected" style="display: nones;">Onay</span>
+                                <div class="selected" style="display: none;">
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none">
+                                            <path
+                                                d="M11.05 3.00002L4.20829 10.2417C3.94996 10.5167 3.69996 11.0584 3.64996 11.4334L3.34162 14.1333C3.23329 15.1083 3.93329 15.775 4.89996 15.6084L7.58329 15.15C7.95829 15.0834 8.48329 14.8084 8.74162 14.525L15.5833 7.28335C16.7666 6.03335 17.3 4.60835 15.4583 2.86668C13.625 1.14168 12.2333 1.75002 11.05 3.00002Z"
+                                                stroke="#004225" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M9.9082 4.20837C10.2665 6.50837 12.1332 8.26671 14.4499 8.50004"
+                                                stroke="#004225" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M2.5 18.3334H17.5" stroke="#004225" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <span class="text">6</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <div class="personal-inform">
+                                <div class="personal-form">
+                                    <div class="form-item">
+                                        <label for="name">İsim</label>
+                                        <input class="" id="name" type="text" placeholder="Bilgilerinizi giriniz" />
+                                    </div>
+                                    <div class="form-item">
+                                        <label for="surname">Soyisim</label>
+                                        <input class="" id="surname" type="text" placeholder="Bilgilerinizi giriniz" />
+                                    </div>
+                                    <div class="form-item">
+                                        <label for="phone">Cep Telefonu</label>
+                                        <input class="" id="phone" type="tel" placeholder="Bilgilerinizi giriniz" />
+                                    </div>
+                                    <div class="form-item">
+                                        <label for="email">E-Posta</label>
+                                        <input class="" id="email" type="email" placeholder="Bilgilerinizi giriniz" />
+                                    </div>
+                                </div>
+                                <div class="inform-for-multiple">
+                                    <div class="icon-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                                stroke="#004225" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <rect x="13.5" y="18" width="3" height="7.5" rx="1"
+                                                transform="rotate(-180 13.5 18)" fill="#004225" />
+                                            <rect x="13.5" y="9" width="3" height="3" rx="1"
+                                                transform="rotate(-180 13.5 9)" fill="#004225" />
+                                        </svg>
+                                    </div>
+                                    <div class="inform-text">
+                                        <p>Bir sonraki adımda cep telefonunuzu doğrulaman gerekiyor</p>
+                                    </div>
+                                </div>
+                                <div class="warning-inform">
+                                    <div class="icon-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                                stroke="#004225" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <rect x="13.5" y="18" width="3" height="7.5" rx="1"
+                                                transform="rotate(-180 13.5 18)" fill="#004225" />
+                                            <rect x="13.5" y="9" width="3" height="3" rx="1"
+                                                transform="rotate(-180 13.5 9)" fill="#004225" />
+                                        </svg>
+                                    </div>
+                                    <div class="inform-text">
+                                        <p>
+                                            <b>Şartlar ve Koşullar</b>
+                                        <ul>
+                                            <li>2 saatlik oturumlarla çalışıyoruz. Dilediğiniz rezervasyon saatinden
+                                                itibaren sizi 2 saat ağırlayabiliriz.</li>
+                                            <li>Rezervasyon saatini 30 dakika geçmesi durumunda iptal edilmemesi için
+                                                bizi aramanızı rica ederiz </li>
+                                            <li>Oturmak istediğiniz belirli bir alan varsa notlarda belirtmenizi rica
+                                                ederiz.</li>
+                                            <li>Arka bahçemizde saat 18:00’den sonra 12 yaş altı misafirlerimizi
+                                                ağırlayamamaktayız.</li>
+                                            <li>Fiziki şartlardan dolayı çocuklu misafirlerimizin daha rahat oturum
+                                                sağlayabilmeleri için mama sandalyelerine ihtiyaçları varsa
+                                                belirtmelerini rica ederiz.</li>
+                                            <li>Rezervasyonunuz oluşturulduktan sonra size gelen bilgilendirme
+                                                mesajındaki linke tıklayarak onaylamanızı rica ederiz.</li>
+                                        </ul>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="recommended-products">
+                <span class="recommended-title">Yıldız Ürünlerimiz</span>
+                <div class="product-list">
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="/img/prd1.jpg" alt="">
+                        </div>
+                        <div class="product-detail">
+                            <span class="title">Napoliten</span>
+                            <p>San Marzano domatesleri, manda sütünden elde edilen taze mozzarella peyniri</p>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="/img/prd2.jpg" alt="">
+                        </div>
+                        <div class="product-detail">
+                            <span class="title">Pepperoni Pizza</span>
+                            <p>Pepperoni, pepperoni sos, mozerella peyniri, mısır, yeşil zeytin ve siyah zeytin</p>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="/img/prd3.jpg" alt="">
+                        </div>
+                        <div class="product-detail">
+                            <span class="title">Tavuklu Pizza</span>
+                            <p>Pizza sosu, mozzarella peyniri, tavuk parçacıkları</p>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="/img/prd4.jpg" alt="">
+                        </div>
+                        <div class="product-detail">
+                            <span class="title">Vejetaryen Pizza</span>
+                            <p>Özel İtalyan Sos, Mozarella Peynir, Beyaz Peynir, Mantar, Siyah Zeytin, Yeşil Biber,
+                                Domates, Kekik.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="store-inform">
+                <div class="inform-head">
+                    <div class="x-left">
+                        <span class="title">Beboz</span>
+                    </div>
+                    <div class="x-right">
+                        <div class="stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none">
+                                <path
+                                    d="M11.4417 2.92501L12.9083 5.85835C13.1083 6.26668 13.6417 6.65835 14.0917 6.73335L16.75 7.17501C18.45 7.45835 18.85 8.69168 17.625 9.90835L15.5583 11.975C15.2083 12.325 15.0167 13 15.125 13.4833L15.7167 16.0417C16.1833 18.0667 15.1083 18.85 13.3167 17.7917L10.825 16.3167C10.375 16.05 9.63332 16.05 9.17499 16.3167L6.68332 17.7917C4.89999 18.85 3.81665 18.0583 4.28332 16.0417L4.87499 13.4833C4.98332 13 4.79165 12.325 4.44165 11.975L2.37499 9.90835C1.15832 8.69168 1.54999 7.45835 3.24999 7.17501L5.90832 6.73335C6.34999 6.65835 6.88332 6.26668 7.08332 5.85835L8.54999 2.92501C9.34999 1.33335 10.65 1.33335 11.4417 2.92501Z"
+                                    stroke="#202020" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span class="rating">4.5 Yıldız</span>
+                            <span class="green-c">450 yorum</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="inform-body">
+                    <div class="detail-item">
+                        <div class="icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                    stroke="#292D32" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M11.6641 6.625V18H10.1641V6.625H11.6641ZM14.7188 11.9766H16.2109V12.6641C16.2109 13.513 16.1016 14.276 15.8828 14.9531C15.6693 15.6302 15.362 16.2083 14.9609 16.6875C14.5599 17.1615 14.0781 17.5234 13.5156 17.7734C12.9531 18.0234 12.3255 18.1484 11.6328 18.1484C11.388 18.1484 11.1432 18.1328 10.8984 18.1016C10.6589 18.0755 10.4141 18.0417 10.1641 18L11.6328 16.8672C12.1328 16.8672 12.5729 16.7786 12.9531 16.6016C13.3385 16.4193 13.6615 16.151 13.9219 15.7969C14.1823 15.4427 14.3802 15.0052 14.5156 14.4844C14.651 13.9583 14.7188 13.3516 14.7188 12.6641V11.9766ZM13.625 7.72656V9.11719L8.25781 11.5703V10.1797L13.625 7.72656ZM13.625 10.3203V11.7031L8.25781 14.1562V12.7734L13.625 10.3203Z"
+                                    fill="black" />
+                            </svg>
+
+                        </div>
+                        <div class="detail">
+                            <span>2 kişilik için ortalama 2,000₺</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24"
+                                fill="none">
+                                <path
+                                    d="M12.5 13.43C14.2231 13.43 15.62 12.0331 15.62 10.31C15.62 8.58687 14.2231 7.19 12.5 7.19C10.7769 7.19 9.38 8.58687 9.38 10.31C9.38 12.0331 10.7769 13.43 12.5 13.43Z"
+                                    stroke="#202020" stroke-width="1.5" />
+                                <path
+                                    d="M4.12001 8.49C6.09001 -0.169998 18.92 -0.159997 20.88 8.5C22.03 13.58 18.87 17.88 16.1 20.54C14.09 22.48 10.91 22.48 8.89001 20.54C6.13001 17.88 2.97001 13.57 4.12001 8.49Z"
+                                    stroke="#202020" stroke-width="1.5" />
+                            </svg>
+                        </div>
+                        <div class="detail">
+                            <span>Kozyatağı, İstanbul</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path d="M6.45001 2V22" stroke="#202020" stroke-width="1.5" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M6.95001 4L15.05 7.5C18.35 8.9 18.35 11.3 15.25 12.9L6.95001 17"
+                                    stroke="#202020" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="detail">
+                            <span>Merkeze 5km</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24"
+                                fill="none">
+                                <path
+                                    d="M22.5 12C22.5 17.52 18.02 22 12.5 22C6.98 22 2.5 17.52 2.5 12C2.5 6.48 6.98 2 12.5 2C18.02 2 22.5 6.48 22.5 12Z"
+                                    stroke="#292D32" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M16.21 15.18L13.11 13.33C12.57 13.01 12.13 12.24 12.13 11.61V7.51001"
+                                    stroke="#292D32" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="detail">
+                            <span><span class="green-c">Çalışma Saati</span> 12:00 - 00:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="b-send">
+        <div class="b-container">
+            <div class="actions">
+                <div class="x-left">
+                    <label class="cr-wrapper">
+                        <input type="checkbox" id="agree" />
+                        <div class="cr-input"></div>
+                        <span><a href="#">KVKK</a>’nu okudum ve onaylıyorum</span>
+                    </label>
+                </div>
+                <div class="x-right">
+                    <input type="hidden" id="orderNumber">
+                    <span onclick="sendBooking()" class="booking-send-btn">Onayla</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="b-modal" id="b-success-booking">
+        <div class="b-content">
+            <div class="success-content">
+                <div onclick="closeModalSuccessOrder()" class="close-modal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
+                            stroke="#3F3F3F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M9.16992 14.83L14.8299 9.16998" stroke="#3F3F3F" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M14.8299 14.83L9.16992 9.16998" stroke="#3F3F3F" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </div>
+                <div class="sub-inform">
+                    <div class="icon">
+                        <svg width="120" height="120" viewBox="0 0 120 120" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="60" cy="60" r="60" fill="#23A26D" fill-opacity="0.12" />
+                            <path
+                                d="M60.8333 32.2222C45.5278 32.2222 33.0555 44.6945 33.0555 60C33.0555 75.3056 45.5278 87.7778 60.8333 87.7778C76.1389 87.7778 88.6111 75.3056 88.6111 60C88.6111 44.6945 76.1389 32.2222 60.8333 32.2222ZM74.1111 53.6111L58.3611 69.3611C57.9722 69.75 57.4444 69.9722 56.8889 69.9722C56.3333 69.9722 55.8055 69.75 55.4167 69.3611L47.5555 61.5C46.75 60.6945 46.75 59.3611 47.5555 58.5556C48.3611 57.75 49.6944 57.75 50.5 58.5556L56.8889 64.9445L71.1667 50.6667C71.9722 49.8611 73.3055 49.8611 74.1111 50.6667C74.9167 51.4722 74.9167 52.7778 74.1111 53.6111Z"
+                                fill="#23A26D" />
+                        </svg>
+
+                    </div>
+                    <div class="booking-detail">
+                        <span class="title">Rezervasyonunuz Onaylandı</span>
+                        <span class="booking-code">Rezervasyon Numarası: <b id="bookingCode">YO1326747</b></span>
+                    </div>
+                </div>
+                <div class="sub-detail">
+                    <div class="store-inform">
+                        <span class="store-title">Beboz Pizza</span>
+                        <p>Bayar Cad. Buket Sok. No:14, Kozyatağı-İstanbul</p>
+                    </div>
+
+                    <div class="options">
+                        <div class="option-item">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"
+                                    fill="none">
+                                    <path d="M8.66663 2.5V5.5" stroke="#272727" stroke-width="1.25"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M16.6666 2.5V5.5" stroke="#272727" stroke-width="1.25"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M18.8666 21.9C20.6339 21.9 22.0666 20.4673 22.0666 18.7C22.0666 16.9327 20.6339 15.5 18.8666 15.5C17.0993 15.5 15.6666 16.9327 15.6666 18.7C15.6666 20.4673 17.0993 21.9 18.8666 21.9Z"
+                                        stroke="#272727" stroke-width="1.25" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M22.6666 22.5L21.6666 21.5" stroke="#272727" stroke-width="1.25"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M4.16663 9.58997H21.1666" stroke="#272727" stroke-width="1.25"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M14.0366 22.5H8.66663C5.16663 22.5 3.66663 20.5 3.66663 17.5V9C3.66663 6 5.16663 4 8.66663 4H16.6666C20.1666 4 21.6666 6 21.6666 9V13.5"
+                                        stroke="#272727" stroke-width="1.25" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M12.6621 14.2H12.6711" stroke="#272727" stroke-width="1.66667"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8.96094 14.2H8.96992" stroke="#272727" stroke-width="1.66667"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8.96094 17.2H8.96992" stroke="#272727" stroke-width="1.66667"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <span id="optionDate">01 Ekim 2024</span>
+                        </div>
+                        <div class="option-item">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
+                                    fill="none">
+                                    <path
+                                        d="M22 12.5C22 18.02 17.52 22.5 12 22.5C6.48 22.5 2 18.02 2 12.5C2 6.98 6.48 2.5 12 2.5C17.52 2.5 22 6.98 22 12.5Z"
+                                        stroke="#272727" stroke-width="1.25" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M15.71 15.68L12.61 13.83C12.07 13.51 11.63 12.74 11.63 12.11V8.01001"
+                                        stroke="#272727" stroke-width="1.25" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <span id="optionTime">15:00</span>
+                        </div>
+                        <div class="option-item">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"
+                                    fill="none">
+                                    <path
+                                        d="M18.3333 7.66C18.2733 7.65 18.2033 7.65 18.1433 7.66C16.7633 7.61 15.6633 6.48 15.6633 5.08C15.6633 3.65 16.8133 2.5 18.2433 2.5C19.6733 2.5 20.8233 3.66 20.8233 5.08C20.8133 6.48 19.7133 7.61 18.3333 7.66Z"
+                                        stroke="#272727" stroke-width="1.25" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M17.3034 14.94C18.6734 15.17 20.1834 14.93 21.2434 14.22C22.6534 13.28 22.6534 11.74 21.2434 10.8C20.1734 10.09 18.6434 9.85003 17.2734 10.09"
+                                        stroke="#272727" stroke-width="1.25" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M6.30323 7.66C6.36323 7.65 6.43323 7.65 6.49323 7.66C7.87323 7.61 8.97323 6.48 8.97323 5.08C8.97323 3.65 7.82323 2.5 6.39323 2.5C4.96323 2.5 3.81323 3.66 3.81323 5.08C3.82323 6.48 4.92323 7.61 6.30323 7.66Z"
+                                        stroke="#272727" stroke-width="1.25" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M7.33319 14.94C5.96319 15.17 4.45319 14.93 3.39319 14.22C1.98319 13.28 1.98319 11.74 3.39319 10.8C4.46319 10.09 5.99319 9.85003 7.36319 10.09"
+                                        stroke="#272727" stroke-width="1.25" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M12.3333 15.13C12.2733 15.12 12.2033 15.12 12.1433 15.13C10.7633 15.08 9.66333 13.95 9.66333 12.55C9.66333 11.12 10.8133 9.97003 12.2433 9.97003C13.6733 9.97003 14.8233 11.13 14.8233 12.55C14.8133 13.95 13.7133 15.09 12.3333 15.13Z"
+                                        stroke="#272727" stroke-width="1.25" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M9.42322 18.28C8.01322 19.22 8.01322 20.76 9.42322 21.7C11.0232 22.77 13.6432 22.77 15.2432 21.7C16.6532 20.76 16.6532 19.22 15.2432 18.28C13.6532 17.22 11.0232 17.22 9.42322 18.28Z"
+                                        stroke="#272727" stroke-width="1.25" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <span id="optionPerson">6 Kişi</span>
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <div class="action-item c-green">
+                            <span>Adrese Git</span>
+                        </div>
+                        <div class="action-item c-blue">
+                            <span>Düzenle</span>
+                        </div>
+                        <div onclick="openModalDeleteOrder()" class="action-item c-red">
+                            <span>İptal Et</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="b-modal" id="b-cancel-booking">
+        <div class="b-content cancel-cap">
+            <div class="cancel-content">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none">
+                        <circle cx="60" cy="60" r="60" fill="#E91C23" fill-opacity="0.12" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M59.5 87C74.6878 87 87 74.6878 87 59.5C87 44.3122 74.6878 32 59.5 32C44.3122 32 32 44.3122 32 59.5C32 74.6878 44.3122 87 59.5 87ZM57 44.5C57 43.1193 58.1193 42 59.5 42C60.8807 42 62 43.1193 62 44.5V66.5C62 67.8807 60.8807 69 59.5 69C58.1193 69 57 67.8807 57 66.5V44.5ZM62 74.5C62 75.8807 60.8807 77 59.5 77C58.1193 77 57 75.8807 57 74.5C57 73.1193 58.1193 72 59.5 72C60.8807 72 62 73.1193 62 74.5Z"
+                            fill="#E91C23" />
+                    </svg>
+                </div>
+
+                <div class="inform">
+                    <span class="title">Rezervasyon İptali</span>
+                    <p>İsteğiniz üzere rezervasyonunuz iptal olacaktır. Onaylıyor musunuz?</p>
+                </div>
+
+                <div class="action">
+                    <div onclick="closeModalDeleteOrder()" class="action-item c-red">
+                        <span>Vazgeç</span>
+                    </div>
+                    <div onclick="deleteOrder()" class="action-item c-green">
+                        <span>Onayla</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="b-modal" id="b-cancel-confirm-booking">
+        <div class="b-content cancel-confirm-cap">
+            <div class="cancel-confirm-content">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none">
+                        <circle cx="60" cy="60" r="60" fill="#2F67E4" fill-opacity="0.1" />
+                        <circle cx="59.5" cy="59.5" r="27.5" fill="#2F67E4" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M73.4496 48.4255C72.3154 47.6382 70.7577 47.9194 69.9703 49.0536L58.5323 65.5313L48.3141 58.1742C47.3057 57.4481 45.8996 57.677 45.1735 58.6855C44.4474 59.6939 44.6763 61.1001 45.6847 61.8261L58.1847 70.8261C59.1932 71.5522 60.5993 71.3233 61.3254 70.3149C61.397 70.2153 61.4594 70.112 61.5126 70.0057C61.5193 69.9964 61.526 69.9869 61.5326 69.9774L74.0777 51.9048C74.8651 50.7706 74.5839 49.2129 73.4496 48.4255Z"
+                            fill="white" />
+                    </svg>
+                </div>
+
+                <div class="inform">
+                    <span class="title">Rezervasyon İptali</span>
+                    <p>İsteğiniz üzere rezervasyonunuz iptal edilmiştir.</p>
+                </div>
+
+                <div class="action">
+                    <div onclick="closeModalDeleteConfirmOrder()" class="action-item c-blue">
+                        <span>Tamam</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="b-modal" id="edit-order-booking">
+        <div class="b-content edit-order-cap">
+            <div class="edit-order-content">
+                <div onclick="closeModalSuccessOrder()" class="close-modal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
+                            stroke="#3F3F3F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M9.16992 14.83L14.8299 9.16998" stroke="#3F3F3F" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M14.8299 14.83L9.16992 9.16998" stroke="#3F3F3F" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </div>
+                <div class="inform">
+                    <span class="title">Rezervasyon Kodunu Girin</span>
+                    <p>E-Posta yada telefon numaranıza gelen rezervasyon kodunu giriniz.</p>
+                    <input class="booking-code" id="booking-code" type="text">
+                </div>
+
+                <div class="action">
+                    <div onclick="redirectBookingEdit()" class="action-item c-blue">
+                        <span>Rezervasyonumu Gör</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-notify@1.0.4/dist/simple-notify.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

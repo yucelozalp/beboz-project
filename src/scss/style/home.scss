@@ -1,0 +1,124 @@
+.b-land-home {
+    padding-top: 100px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left {
+        text-align: left;
+
+        .text {
+            margin-bottom: 90px;
+
+            .title {
+                font-size: 46px;
+                font-weight: 700;
+                color: black;
+                margin-bottom: 14px;
+                line-height: 66.94px;
+
+                .red-color {
+                    color: #E91C23;
+                }
+            }
+
+            p {
+                font-size: 26px;
+                font-weight: 400;
+                color: #4A4A4A;
+                line-height: 44.33px;
+            }
+        }
+
+        .recom-prod-list {
+            .prod-item {
+                display: flex;
+                box-sizing: border-box;
+                width: 349px;
+                height: 132px;
+                flex-shrink: 0;
+                border-radius: 25px;
+                background: #FFF;
+                box-shadow: 7px 35px 51px 0px rgba(0, 0, 0, 0.14);
+                padding: 20px 17px;
+
+                .prod-img {
+                    display: inline-block;
+                    padding-right: 28px;
+
+                    img {
+                        border-radius: 15px;
+                    }
+                }
+
+                .prod-detail {
+                    display: inline-block;
+
+                    .prod-title {
+                        display: block;
+                        color: #2C2C2C;
+                        font-size: 22px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                        margin-bottom: 10px;
+                    }
+
+                    .prod-stars {
+                        margin-bottom: 10px;
+
+                        svg{
+                            margin-right: 7px;
+
+                            &:last-child{
+                                margin-right: 0;
+                            }
+                        }
+                    }
+
+                    .price {
+                        color: #515151;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+
+                        .currency {
+                            color: #FF7979;
+                            font-size: 18px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: normal;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .right {
+        text-align: right;
+
+        .poster {
+            .poster-img {
+                border-radius: 50%;
+                box-shadow: 7px 12px 31px 0px #0000002E;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .b-land-home {
+        display: flex;
+        flex-direction: column;
+        .left{
+            zoom: 0.8;
+            text-align: center;
+        }
+
+        .right{
+            display: none;
+        }
+    }
+}
